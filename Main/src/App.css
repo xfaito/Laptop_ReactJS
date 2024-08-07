@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container>header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #fff;
+    height: 60px;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+.header .logo {
+    font-size: 32px;
+    color: #2b2b2b;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header.search {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.search input {
+    padding: 8px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    max-width: 300px;
+    width: 400px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid #2b2b2b;
+}
+
+.timkiem {
+    position: relative;
+    right: 40px;
+    color: #2b2b2b;
+}
+
+.user-box {
+    display: flex;
+    padding: 10px 10px;
+}
+
+.user,
+.cart {
+    background-color: #2b2b2b;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.user-icon,
+.cart-icon {
+    color: #fff;
+    width: 22px;
+    height: 22px;
+}
+
+.container>nav {
+    margin-top: 60px;
+    background: #fff;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+.container>main {
+    min-height: 400px;
+}
+
+.container>footer {
+    background: #2b2b2b;
+    height: 90px;
+    text-align: center;
+    align-content: center;
+}
+
+.container>footer p {
+    font-size: 20px;
+    color: #fff;
+
+}
+
+.container>nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container>nav>ul>li {
+    display: inline-block;
+    min-width: 50px;
+    margin: 5px;
+    text-align: center
+}
+
+.container>nav>ul>li>a {
+    color: #2b2b2b;
+    cursor: pointer;
+}
+
+.container>nav>ul>li>a:hover {
+    color: #000;
+}
+
+h1 {
+    padding: 0 150px;
+    margin-bottom: 8px;
+}
+
+.spxn,
+.home {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 0 150px;
+    margin: 20px 0;
+}
+
+.spxn>.sp,
+.home>.sp {
+    padding: 5px;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.spxn>.sp:hover,
+.home>.sp:hover {
+    box-shadow: 5px 8px 10px #5c5c5c80;
+    border-radius: 5px;
+}
+
+.sp>h4 {
+    height: 20px;
+    font-size: 14px;
+    color: #2b2b2b;
+    margin-bottom: 12px;
+}
+
+.spxn>.sp>img,
+.home>.sp>img {
+    inset: 0px;
+    margin: auto;
+    object-fit: contain;
+    max-width: 100%;
+    height: 100%;
+
+}
+
+img {
+    max-width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+
+.gia,
+.gia_km {
+    font-family: Arial, sans-serif;
+    margin-bottom: 5px;
+}
+
+.gia_km {
+    font-size: 16px;
+    color: #000;
+
+}
+
+.gia {
+    font-size: 12px;
+    color: #5c5c5c;
+    text-decoration: line-through;
+}
+
+
+
+button {
+    color: #5c5c5c;
+    padding: 5px 10px;
+    border: 1px solid #2b2b2b;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #fff;
+    transition: 0.75s;
+}
+
+button:hover {
+    border: 1px solid #2b2b2b;
+    background-color: #f5f5f5;
+}
+
+.box {
+    margin-top: 20px;
+}
+
+article {
+    margin: 10px;
+}
+
+#chitiet {
+    margin-top: 100px;
+    padding: 0 150px;
+}
+
+#chitiet>#row1 {
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 10px;
+
+}
+
+#chitiet>#row1>#trai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chitiet>#row1>#trai .img-ct {
+    max-width: 100%;
+    width: 600px;
+    height: 100%;
+}
+
+#chitiet>#row1>#phai {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 8px 0;
+    border: 1px solid #2b2b2b;
+    margin-left: 10px;
+
+}
+
+#chitiet>#row1>#phai p {
+    margin: 10px
+}
+
+#chitiet>#row1>#phai .ttsp {
+    width: 380px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 24px);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px;
+    border: 2px solid #2b2b2b;
+    border-radius: 8px;
+}
+
+.ttsp-ct {
+    font-size: 16px;
+
+}
+
+
+#chitiet>#row1>#phai .h3 {
+    max-width: 100%;
+    font-size: 30px;
+}
+
+#chitiet>#row1>#phai .gia-ct {
+    margin-left: 20px;
+    color: #2b2b2b;
+    text-decoration: line-through;
+}
+
+#chitiet>#row1>#phai .gia-km-ct {
+    margin-left: 12px;
+    font-size: 32px;
+    color: #000;
+}
+
+#chitiet>#row1>#phai .mua {
+    display: flex;
+    align-items: center;
+}
+
+#chitiet>#row1>#phai button {
+    color: #5c5c5c;
+    height: 50px;
+    padding: 5px 30px;
+    border: 1px solid #2b2b2b;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #fff;
+    transition: 0.75s;
+}
+
+#chitiet>#row1>#phai button:hover {
+    border: 1px solid #2b2b2b;
+    background-color: #f5f5f5;
+
+}
+
+/*LIST SP*/
+#listsp h1 {
+    font-size: 20px;
+    color: #2b2b2b;
+    padding: 10px
+}
+
+#listsp #data {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#listsp #data>.sp {
+    padding: 5px;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+#listsp #data>.sp:hover {
+    box-shadow: 5px 8px 10px #5c5c5c80;
+    border-radius: 5px;
+}
+
+#listsp #data>.sp>h4>a {
+    height: 40px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+}
+
+#listsp #data>.sp>img {
+    max-width: 100%;
+    height: 150px;
+}
+
+/* thanhphantrang */
+
+.thanhphantrang {
+    list-style: none;
+    text-align: center;
+}
+
+.thanhphantrang li {
+    display: inline-block;
+    margin: 5px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+}
+
+.thanhphantrang li a {
+    color: #5c5c5c;
+    font-weight: bold;
+}
+
+.thanhphantrang li.selected a {
+    color: #000;
+}
+
+.thanhphantrang li a:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* giohang */
+#giohang {
+    padding: 0 150px;
+    position: relative;
+}
+  
+#giohang>#cart {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 10px;
+}
+
+#giohang>#cart .gh-trai {
+    border: 1px solid #5c5c5c;
+    border-radius: 8px;
+    padding: 5px;
+}
+table {
+    table-layout: fixed;
+  }
+  th, td {
+    width: 20%; 
+  }
+  th:nth-child(1), td:nth-child(1) { 
+    width: 10%; 
+  }
+  th:nth-child(3), td:nth-child(3) { 
+    width: 1%; 
+  }
+  th:nth-child(4), td:nth-child(4) { 
+    width: 8%; 
+  }
+  th:nth-child(5), td:nth-child(5) {
+    width: 1%; 
+  }
+
+#giohang>#cart .gh-trai img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+#giohang>#cart .gh-trai p{
+    font-size: 16px;
+}
+#giohang > #cart .gh-trai input[type="number"] {
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    appearance: none; 
+  }
+
+#giohang>#cart .gh-trai .gia-gh .gia-gh-km {
+    font-size: 16px;
+}
+#giohang>#cart .gh-trai .gia-gh .gia-gh-t {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+#giohang button{
+    margin: 10px 0;
+}
+#giohang>#cart .gh-trai .trash{
+    cursor: pointer;
+}
+.hoadon {
+    position: absolute;  
+    right: 110px;
+    top: 55px;    
+    width: 400px;
+    height: auto;
+    border: 1px solid #5c5c5c;   
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+
+.hoadon p {
+    font-size: 14px;
+    padding: 20px 0;
+}
+.hoadon .btn-thanhtoan a{
+    color: #000;
+}
+.hoadon .btn-thanhtoan {
+    padding: 10px 20px;
+    border: 1px solid #2b2b2b;
+    border-radius: 8px ;
+    cursor: pointer;
+    transition: 0.75s;
+}
+.hoadon .btn-thanhtoan:hover{
+    border: 1px solid #2b2b2b;
+    background-color: #f5f5f5;
+}
+
+
+#giohang>h2 {
+    color: #2b2b2b;
+    padding: 10px;
+    font-size: 1.3em
+}
+
+/* thanhtoan */
+form#frmthanhtoan {
+    width: 500px;
+    margin: 20px auto;
+    border: 1px solid #ddd; 
+    padding: 20px;
+    border-radius: 5px; 
+  }
+  
+  #frmthanhtoan  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  #frmthanhtoan  label {
+    display: block; 
+    margin: 10px 0 ;
+    font-weight: bold;
+  }
+  
+  #frmthanhtoan  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px; 
+    font-size: 1em;
+  }
+  
+  /* Button styling */
+  #frmthanhtoan button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 1em;
+  }
+  
+/*TimKiem*/
+.kq-list{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px #ddd;
+    border-radius: 8px;
+    margin-top: 1rem;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.kq-timkiem{
+    padding: 10px 20px;
+}
